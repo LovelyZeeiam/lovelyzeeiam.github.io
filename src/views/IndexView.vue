@@ -13,8 +13,7 @@
             <div class="content">
                 <p>Hi there~ My name is LovelyZeeiam, good at Java and Vue. I'm a college student now, majoring in Information Technology.</p>
                 <div class="lang-show">
-                    <img :src="langStatUrl" class="lang-statistic float-right" />
-                    <div class="list">
+                    <div class="list flex-fill">
                         <h2>Languages</h2>
                         <ul class="langs">
                             <li v-for="obj in languages" :key="obj.name">
@@ -23,7 +22,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="float-clear"></div>
+                    <img :src="langStatUrl" class="lang-statistic" />
                 </div>
                 <div class="projects-show">
                     <div class="list">
@@ -98,7 +97,6 @@ export default {
     align-items: center;
 
     min-height: 100vh;
-    min-width: 450px;
 
 }
 
@@ -172,6 +170,7 @@ export default {
 }
 
 .structure .trueView .user {
+    margin-bottom: 10px;
     display: inline-block;
 }
 
@@ -227,14 +226,29 @@ export default {
     margin-left: 1.5em;
 }
 
+.structure .trueView .content .lang-show {
+    display: flex;
+
+    @media screen and (max-width:500px) {
+        display: block; 
+    }
+
+}
+
 .structure .trueView .content .langs .lang-desc {
     color: rgba(0,0,0,0.6);
     font-size: 0.8em;
 }
 
 .structure .trueView .content .lang-statistic {
-    width: 200px;
-    padding-left: 30px;
+    width: 260px;
+    padding-left: 1.2em;
+
+    @media screen and (max-width:500px) {
+        display: block;
+        margin: 10px auto;
+    }
+
 }
 
 .structure .trueView .content .projs {
@@ -279,7 +293,7 @@ export default {
 
 .structure .trueView .content .commit-statistic {
     display: block;
-    width: 80%;
+    width: 300px;
     margin: 0 auto;
 }
 
