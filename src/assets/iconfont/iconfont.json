@@ -1,0 +1,23 @@
+{
+  "id": "3564607",
+  "name": "self-website",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4937000",
+      "name": "github-fill",
+      "font_class": "github-fill",
+      "unicode": "e885",
+      "unicode_decimal": 59525
+    },
+    {
+      "icon_id": "10932452",
+      "name": "bilibili-line",
+      "font_class": "bilibili-line",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    }
+  ]
+}
