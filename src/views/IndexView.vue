@@ -1,9 +1,9 @@
 <template>
     <div class="structure">
-        <img class="icon icon-anim" src="@/assets/icon.jpeg">
+        <IconHead class="icon icon-anim" />
         <div class="trueView">
             <div class="user">
-                <img class="icon float-left" src="@/assets/icon.jpeg">
+                <IconHead class="icon" />
                 <div class="user-info float-right">
                     <h1 class="user-name">LovelyZeeiam</h1>
                     <p class="little-introduce">A Minecraft Player, coder and music producer</p>
@@ -63,6 +63,8 @@
 </template>
 
 <script>
+import IconHead from '@/components/IconHead.vue';
+
 export default {
     name: "IndexViewStructure",
     data() {
@@ -78,6 +80,9 @@ export default {
             langStatUrl: "https://github-readme-stats.vercel.app/api/top-langs/?username=LovelyZeeiam",
             commitStatUrl: "https://github-readme-stats.vercel.app/api?username=LovelyZeeiam&include_all_commits=true&count_private-true&custom_title=LovelyZeeiam'%20GitHub%20Stats&line_height=30&show_icons=true&hide_border=true"
         };
+    },
+    components: {
+        IconHead
     }
 }
 </script>
@@ -102,13 +107,6 @@ export default {
 
 .structure .icon {
     width: @iconSize;
-    aspect-ratio: 1;
-
-    border: 1px solid rgba(0, 0, 0, 0.7);
-    border-radius: calc(@iconSize * 0.4);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
-
-    position: relative;
 }
 
 .structure .icon-anim {
@@ -246,6 +244,7 @@ export default {
 .structure .trueView .content .lang-statistic {
     width: 260px;
     padding-left: 1.2em;
+    margin-top: 0.4em;
 
     @media screen and (max-width:500px) {
         display: block;
@@ -278,8 +277,8 @@ export default {
 }
 
 .structure .trueView .content .projs {
-    border: 1px solid rgba(0,0,0,0.05);
-    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.13);
+    box-shadow: 0 0 2px rgba(0,0,0,0.1);
     border-radius: 3px;
 }
 
@@ -298,6 +297,9 @@ export default {
     display: block;
     width: 300px;
     margin: 0 auto;
+
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
 }
 
 .structure .trueView .content .socialShow .social-entry {

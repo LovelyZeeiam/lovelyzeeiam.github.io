@@ -1,23 +1,15 @@
 <template>
   <div id="app">
-    <IndexView />
+    <router-view />
   </div>
 </template>
 
 <script>
-import IndexView from './views/IndexView.vue'
-
 export default {
-  name: "App",
-  components: {
-    IndexView
-  }
+    name: "App"
 }
-
 </script>
 
-<style lang="less">
-
-
+<style lang="less" scoped>
 
 </style>
