@@ -6,6 +6,9 @@ import store from './store'
 import './global.less'
 import './assets/iconfont/iconfont.css'
 
+import  FastClick  from  'fastclick'
+FastClick.attach(document.body);
+
 Vue.config.productionTip = false
 
 new Vue({
