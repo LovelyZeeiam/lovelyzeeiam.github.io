@@ -11,8 +11,16 @@ FastClick.attach(document.body);
 
 Vue.config.productionTip = false
 
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) { //拦截后设置标题
+    document.title = to.meta.title
+  }
+  next()
+})
+
 new Vue({
   router,
   store,
   render: h => h(App)
 }).$mount('#app')
+

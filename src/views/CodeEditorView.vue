@@ -1,10 +1,18 @@
 <template>
-  
+    <div class="view">
+        <CodeEditor />
+    </div>
 </template>
 
 <script>
-export default {
+import CodeEditor from '@/components/codeeditor/CodeEditor.vue'
 
+export default {
+    name: "CodeEditorView",
+    components: {
+    CodeEditor,
+    CodeEditor
+}
 }
 </script>
 
